@@ -1,5 +1,6 @@
 using System.Web.Mvc;
 using EPiServer.Core;
+using EPiServer.Forms.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Framework.Web;
 using EPiServer.Web;
@@ -12,9 +13,17 @@ namespace Toders.Forms.Controllers
         TemplateTypeCategory = TemplateTypeCategories.MvcController,
         Tags = new[] { RenderingTags.Preview, RenderingTags.Edit },
         Default = true,
-        AvailableWithoutTag = false)]
+        AvailableWithoutTag = false,
+        ModelType = typeof(FormContainerBlock))]
+    [TemplateDescriptor(
+        TemplateTypeCategory = TemplateTypeCategories.MvcController,
+        Tags = new[] { RenderingTags.Preview, RenderingTags.Edit },
+        Default = true,
+        AvailableWithoutTag = false,
+        Inherited = true,
+        ModelType = typeof(ElementBlockBase))]
     [VisitorGroupImpersonation]
-    public class PreviewFormController : ActionControllerBase, IRenderTemplate<FormContainerBlock>
+    public class PreviewFormController : ActionControllerBase
     {
         public ActionResult Index(IContent currentContent)
         {
