@@ -177,7 +177,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Forms\FormReader.cs" />
+    <Compile Include="Business\Forms\InitializationModule.cs" />
+    <Compile Include="Business\Initialization\BundleConfig.cs" />
     <Compile Include="Controllers\PreviewFormController.cs" />
+    <Compile Include="Models\Forms\MapElementBlock.cs" />
     <Compile Include="Properties\AssemblyInfo-Core.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +189,10 @@
     <None Include="packages.Toders.Forms.config" />
     <None Include="Views\PreviewForm\Index.cshtml" />
     <None Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LanguageFiles\ContentTypeNames_Forms.xml" />
+    <Content Include="Static\js\locationpicker.jquery.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

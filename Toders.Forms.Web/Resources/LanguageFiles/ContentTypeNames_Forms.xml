@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<language name="English"
+						id="en">
+		<contenttypes>
+			<mapElementBlock>
+				<name>Select map position</name>
+			</mapElementBlock>
+		</contenttypes>
+	</language>
+</languages>
